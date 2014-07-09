@@ -38,6 +38,8 @@
 		19E3F3A0196DD5B700C90C56 /* SF_FileSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SF_FileSystem.cpp; path = src/SF_FileSystem.cpp; sourceTree = "<group>"; };
 		19E3F3A2196DD68500C90C56 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		19E3F3A4196DD68E00C90C56 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		19E3F3A8196DF11600C90C56 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		19E3F3A9196DF11600C90C56 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,9 @@
 		19E3F37D196DD40400C90C56 = {
 			isa = PBXGroup;
 			children = (
-				19E3F3A4196DD68E00C90C56 /* CoreFoundation.framework */,
-				19E3F3A2196DD68500C90C56 /* libsqlite3.dylib */,
+				19E3F3A8196DF11600C90C56 /* LICENSE */,
+				19E3F3A9196DF11600C90C56 /* README.md */,
+				19E3F3A7196DF10100C90C56 /* Frameworks */,
 				19E3F388196DD40400C90C56 /* DBManager */,
 				19E3F387196DD40400C90C56 /* Products */,
 			);
@@ -98,6 +101,15 @@
 				19E3F39B196DD51400C90C56 /* master.db */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		19E3F3A7196DF10100C90C56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19E3F3A4196DD68E00C90C56 /* CoreFoundation.framework */,
+				19E3F3A2196DD68500C90C56 /* libsqlite3.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +275,7 @@
 				19E3F391196DD40400C90C56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
