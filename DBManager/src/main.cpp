@@ -43,7 +43,7 @@ void testSelectQuery(const database::Object &db)
     };
     
 	for (database::Query q(db, "select * from campaign"); !q.End(); q.Next()) {
-        assert(expectedResult == q.Get());
+        assert(expectedResult == q.Result());
 	}
 }
 
@@ -58,7 +58,7 @@ void testInsertQuery(const database::Object &db)
 
     int count = 0;
 	for (database::Query q(db, "select * from player"); !q.End(); q.Next()) {
-        assert(expectedResults[count++] == q.Get());
+        assert(expectedResults[count++] == q.Result());
 	}
 }
 
@@ -75,7 +75,7 @@ void testUpdateQuery(const database::Object &db)
     database::Query(db, "update campaign set score = '1000' where id = 0");
 
     for (database::Query q(db, "select * from campaign"); !q.End(); q.Next()) {
-        assert(expectedResult == q.Get());
+        assert(expectedResult == q.Result());
 	}
 }
 
@@ -86,7 +86,7 @@ void testDeleteQuery(const database::Object &db)
     };
 
     for (database::Query q(db, "delete from player where campaign_id = '0'"); !q.End(); q.Next()) {
-        assert(expectedResult == q.Get());
+        assert(expectedResult == q.Result());
     }
 }
 

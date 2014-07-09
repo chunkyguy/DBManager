@@ -31,16 +31,15 @@ namespace database {
      *      // process anEntry
      * }
      */
-    typedef std::vector<std::map<std::string, std::string> > Result;
     class Query {
 	public:
 		Query(const Object &database, const std::string &statement);
 		bool End() const;
-		std::map<std::string, std::string> Get() const;
+		std::map<std::string, std::string> Result() const;
 		void Next();
 		
 	private:
-		Result result_;
+		std::vector<std::map<std::string, std::string> > result_;
 		bool success_;
 		std::vector<std::map<std::string, std::string> >::const_iterator seek_;
 	};

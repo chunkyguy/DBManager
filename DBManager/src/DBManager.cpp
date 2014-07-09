@@ -14,7 +14,7 @@ namespace database {
                 item[std::string(cols[i])] = std::string(rows[i]);
             }
             
-            Result *r = static_cast<Result*>(result);
+            std::vector<std::map<std::string, std::string> > *r = static_cast<std::vector<std::map<std::string, std::string> >*>(result);
             r->push_back(item);
             
             //	std::vector<> resultArr;
@@ -31,7 +31,9 @@ namespace database {
         }
         
         
-        bool Execute(const Object &slf, const std::string &query, Result *result) {
+        bool Execute(const Object &slf,
+                     const std::string &query,
+                     std::vector<std::map<std::string, std::string> > *result) {
             return (sqlite3_exec(slf.object(), query.c_str(), callback, result, 0) == SQLITE_OK);
         }
     }
@@ -66,7 +68,7 @@ namespace database {
 		return !(success_ && (seek_ != result_.end()));
 	}
 	
-	std::map<std::string, std::string> Query::Get() const {
+	std::map<std::string, std::string> Query::Result() const {
 		return *seek_;
 	}
 	
