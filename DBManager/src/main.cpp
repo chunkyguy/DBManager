@@ -1,3 +1,11 @@
+//
+//  main.cpp
+//  DBManager
+//
+//  Created by Sid on 07/07/14.
+//  Copyright (c) 2014 whackylabs. All rights reserved.
+//
+
 #include <cassert>
 #include <iostream>
 #include <string>

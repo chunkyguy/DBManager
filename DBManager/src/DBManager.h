@@ -1,7 +1,19 @@
+//
+//  DBManager.h
+//  DBManager
+//
+//  Created by Sid on 07/07/14.
+//  Copyright (c) 2014 whackylabs. All rights reserved.
+//
+
+#ifndef __DBManager_
+#define __DBManager_
 #include <string>
 #include <vector>
 #include <map>
-#include <sqlite3.h>
+
+// fwd decl
+struct sqlite3;
 
 namespace database {
 
@@ -43,5 +55,5 @@ namespace database {
 		bool success_;
 		std::vector<std::map<std::string, std::string> >::const_iterator seek_;
 	};
-	
 }
+#endif

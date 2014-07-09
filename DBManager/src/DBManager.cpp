@@ -1,7 +1,16 @@
+//
+//  DBManager.cpp
+//  DBManager
+//
+//  Created by Sid on 07/07/14.
+//  Copyright (c) 2014 whackylabs. All rights reserved.
+//
+
 #include "DBManager.h"
 
 #include <iostream>
 #include <cassert>
+#include <sqlite3.h>
 
 namespace database {
 
